@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #0a1226;
+  --text-2: #5b6475;
+  --text-3: #9aa3b5;
+  --border: #e3e8f0;
+  --brand-soft: #e6f0ff;
+  --success-soft: #e9f9ef;
+  --success-ink: #1e8e45;
+  --warning-soft: #fff3d6;
+  --warning-ink: #9a6b00;
+  --danger-soft: #ffedee;
+  --danger-ink: #d93040;
+  --glass-bg: rgba(255, 255, 255, 0.62);
+  --glass-border: rgba(255, 255, 255, 0.7);
+}
+
+.dark {
+  --bg: #0b1022;
+  --card: #131a33;
+  --text: #f2f5fc;
+  --text-2: #a4aec4;
+  --text-3: #6b7592;
+  --border: #232c4a;
+  --brand-soft: #14284f;
+  --success-soft: #0f2a1c;
+  --success-ink: #5fd68a;
+  --warning-soft: #33260a;
+  --warning-ink: #ffc24d;
+  --danger-soft: #34141a;
+  --danger-ink: #ff7a86;
+  --glass-bg: rgba(19, 26, 51, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+html {
+  background: var(--bg);
+  color: var(--text);
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  min-height: 100dvh;
+}
+
+/* iOS-style frosted glass: used for the bottom bar, secondary buttons, lock overlay */
+@layer components {
+  .glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    backdrop-filter: blur(18px) saturate(160%);
+  }
+  .press {
+    transition: transform 250ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .press:active {
+    transform: scale(0.96);
+  }
+  .btn-primary {
+    background: linear-gradient(180deg, #3b8cff 0%, #0a6cff 100%);
+    box-shadow: 0 8px 20px rgba(10, 108, 255, 0.28);
+    color: #fff;
+  }
+}
