@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 :root {
+  --font-inter: "Inter Variable";
+  --font-mono: "JetBrains Mono Variable";
+}
+
+:root {
   --bg: #f5f7fb;
   --card: #ffffff;
   --text: #0a1226;

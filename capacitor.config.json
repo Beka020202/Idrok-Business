@@ -1,0 +1,6 @@
+{
+  "appId": "uz.idrok.business",
+  "appName": "Idrok Business",
+  "webDir": "out",
+  "android": { "backgroundColor": "#0A6CFF" }
+}
